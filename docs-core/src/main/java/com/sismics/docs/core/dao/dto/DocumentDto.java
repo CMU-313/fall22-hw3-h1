@@ -25,6 +25,21 @@ public class DocumentDto {
      * Description.
      */
     private String description;
+
+    /**
+     * GPA.
+     */
+    private String GPA;
+
+    /**
+     * GRE.
+     */
+    private String GRE;
+
+    /**
+     * Score.
+     */
+    private String Score;
     
     /**
      * Subject.
@@ -142,6 +157,30 @@ public class DocumentDto {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getGPA() {
+        return GPA;
+    }
+
+    public void setGPA(String GPA) {
+        this.GPA = GPA;
+    }
+
+    public String getGRE() {
+        return GRE;
+    }
+
+    public void setGRE(String GRE) {
+        this.GRE = GRE;
+    }
+
+    public String getScore() {
+        return Score;
+    }
+
+    public void setScore(String Score) {
+        this.Score = Score;
     }
 
     public String getSubject() {
