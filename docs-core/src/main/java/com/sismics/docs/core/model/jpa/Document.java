@@ -54,6 +54,24 @@ public class Document implements Loggable {
     private String description;
     
     /**
+     * GPA.
+     */
+    @Column(name = "DOC_GPA_C", nullable = false, length = 100)
+    private String GPA;
+
+    /**
+     * GRE.
+     */
+    @Column(name = "DOC_GRE_C", nullable = false, length = 100)
+    private String GRE;
+
+    /**
+     * SCORE.
+     */
+    @Column(name = "DOC_SCORE_C", nullable = false, length = 100)
+    private String score;
+
+    /**
      * Subject.
      */
     @Column(name = "DOC_SUBJECT_C", length = 500)
@@ -168,6 +186,30 @@ public class Document implements Loggable {
         this.description = description;
     }
     
+    public String getGPA() {
+        return GPA;
+    }
+
+    public void setGPA(String GPA) {
+        this.GPA = GPA;
+    }
+
+    public String getGRE() {
+        return GRE;
+    }
+
+    public void setGRE(String GRE) {
+        this.GRE = GRE;
+    }
+
+    public String getScore() {
+        return score;
+    }
+
+    public void setScore(String score) {
+        this.score = score;
+    }
+
     public String getSubject() {
         return subject;
     }
