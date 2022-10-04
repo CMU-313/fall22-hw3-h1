@@ -94,6 +94,9 @@ public class DocumentResource extends BaseResource {
      * @apiSuccess {String} id ID
      * @apiSuccess {String} title Title
      * @apiSuccess {String} description Description
+     * @apiSuccess {String} GPA GPA
+     * @apiSuccess {String} GRE GRE
+     * @apiSuccess {String} Score Score
      * @apiSuccess {Number} create_date Create date (timestamp)
      * @apiSuccess {Number} update_date Update date (timestamp)
      * @apiSuccess {String} language Language
@@ -169,6 +172,9 @@ public class DocumentResource extends BaseResource {
                 .add("id", documentDto.getId())
                 .add("title", documentDto.getTitle())
                 .add("description", JsonUtil.nullable(documentDto.getDescription()))
+                .add("GPA", documentDto.getGPA())
+                .add("GRE", documentDto.getGRE())
+                .add("Score", documentDto.getScore())
                 .add("create_date", documentDto.getCreateTimestamp())
                 .add("update_date", documentDto.getUpdateTimestamp())
                 .add("language", documentDto.getLanguage())
@@ -373,6 +379,9 @@ public class DocumentResource extends BaseResource {
      * @apiSuccess {String} documents.file_id Main file ID
      * @apiSuccess {String} documents.title Title
      * @apiSuccess {String} documents.description Description
+     * @apiSuccess {String} GPA GPA
+     * @apiSuccess {String} GRE GRE
+     * @apiSuccess {String} Score Score
      * @apiSuccess {Number} documents.create_date Create date (timestamp)
      * @apiSuccess {Number} documents.update_date Update date (timestamp)
      * @apiSuccess {String} documents.language Language
@@ -459,6 +468,9 @@ public class DocumentResource extends BaseResource {
                     .add("file_id", JsonUtil.nullable(documentDto.getFileId()))
                     .add("title", documentDto.getTitle())
                     .add("description", JsonUtil.nullable(documentDto.getDescription()))
+                    .add("GPA", documentDto.getGPA())
+                    .add("GRE", documentDto.getGRE())
+                    .add("Score", documentDto.getScore())
                     .add("create_date", documentDto.getCreateTimestamp())
                     .add("update_date", documentDto.getUpdateTimestamp())
                     .add("language", documentDto.getLanguage())
@@ -679,6 +691,9 @@ public class DocumentResource extends BaseResource {
      * @apiGroup Document
      * @apiParam {String} title Title
      * @apiParam {String} [description] Description
+     * @apiParam {String} [GPA] GPA
+     * @apiParam {String} [GRE] GRE
+     * @apiParam {String} [Score] Score
      * @apiParam {String} [subject] Subject
      * @apiParam {String} [identifier] Identifier
      * @apiParam {String} [publisher] Publisher
@@ -701,6 +716,9 @@ public class DocumentResource extends BaseResource {
      *
      * @param title Title
      * @param description Description
+     * @param GPA GPA
+     * @param GRE GRE
+     * @param Score Score
      * @param subject Subject
      * @param identifier Identifier
      * @param publisher Publisher
@@ -721,6 +739,9 @@ public class DocumentResource extends BaseResource {
     public Response add(
             @FormParam("title") String title,
             @FormParam("description") String description,
+            @FormParam("GPA") String GPA,
+            @FormParam("GRE") String GRE,
+            @FormParam("Score") String Score,
             @FormParam("subject") String subject,
             @FormParam("identifier") String identifier,
             @FormParam("publisher") String publisher,
@@ -761,6 +782,9 @@ public class DocumentResource extends BaseResource {
         document.setUserId(principal.getId());
         document.setTitle(title);
         document.setDescription(description);
+        document.setGPA(GPA);
+        document.setGRE(GRE);
+        document.setScore(Score);
         document.setSubject(subject);
         document.setIdentifier(identifier);
         document.setPublisher(publisher);
@@ -812,6 +836,9 @@ public class DocumentResource extends BaseResource {
      * @apiParam {String} id ID
      * @apiParam {String} title Title
      * @apiParam {String} [description] Description
+     * @apiParam {String} [GPA] GPA
+     * @apiParam {String} [GRE] GRE
+     * @apiParam {String} [Score] Score
      * @apiParam {String} [subject] Subject
      * @apiParam {String} [identifier] Identifier
      * @apiParam {String} [publisher] Publisher
@@ -843,6 +870,9 @@ public class DocumentResource extends BaseResource {
             @PathParam("id") String id,
             @FormParam("title") String title,
             @FormParam("description") String description,
+            @FormParam("GPA") String GPA,
+            @FormParam("GRE") String GRE,
+            @FormParam("Score") String Score,
             @FormParam("subject") String subject,
             @FormParam("identifier") String identifier,
             @FormParam("publisher") String publisher,
@@ -894,6 +924,9 @@ public class DocumentResource extends BaseResource {
         // Update the document
         document.setTitle(title);
         document.setDescription(description);
+        document.setGPA(GPA);
+        document.setGRE(GRE);
+        document.setScore(Score);
         document.setSubject(subject);
         document.setIdentifier(identifier);
         document.setPublisher(publisher);

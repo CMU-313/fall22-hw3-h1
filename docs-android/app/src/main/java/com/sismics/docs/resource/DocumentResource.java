@@ -82,16 +82,22 @@ public class DocumentResource extends BaseResource {
      * @param context Context
      * @param title Title
      * @param description Description
+     * @param GPA GPA
+     * @param GRE GRE
+     * @param Score Score
      * @param tagIdList Tags ID list
      * @param language Language
      * @param createDate Create date
      * @param callback Callback
      */
-    public static void add(Context context, String title, String description,
+    public static void add(Context context, String title, String description, String GPA, String GRE, String Score,
                            Set<String> tagIdList, String language, long createDate, HttpCallback callback) {
         FormBody.Builder formBuilder = new FormBody.Builder()
                 .add("title", title)
                 .add("description", description)
+                .add("GPA", GPA)
+                .add("GRE", GRE)
+                .add("Score", Score)
                 .add("language", language)
                 .add("create_date", Long.toString(createDate));
         for( String tagId : tagIdList) {
