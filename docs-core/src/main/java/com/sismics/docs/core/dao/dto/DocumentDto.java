@@ -39,7 +39,7 @@ public class DocumentDto {
     /**
      * Score.
      */
-    private String Score;
+    private String score;
     
     /**
      * Subject.
@@ -176,11 +176,11 @@ public class DocumentDto {
     }
 
     public String getScore() {
-        return Score;
+        return score;
     }
 
-    public void setScore(String Score) {
-        this.Score = Score;
+    public void setScore(String score) {
+        this.score = score;
     }
 
     public String getSubject() {

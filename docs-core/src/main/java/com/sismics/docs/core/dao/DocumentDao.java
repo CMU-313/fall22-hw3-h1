@@ -33,6 +33,16 @@ public class DocumentDao {
         // Create the UUID
         document.setId(UUID.randomUUID().toString());
         document.setUpdateDate(new Date());
+        if (document.getGPA() == null) {
+            document.setGPA("N/A");
+        }
+        if (document.getGRE() == null) {
+            document.setGRE("N/A");
+        }
+        if (document.getScore() == null) {
+            document.setScore("N/A");
+        }
+
         
         // Create the document
         EntityManager em = ThreadLocalContext.get().getEntityManager();
