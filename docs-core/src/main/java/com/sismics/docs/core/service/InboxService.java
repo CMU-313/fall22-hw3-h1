@@ -225,6 +225,9 @@ public class InboxService extends AbstractScheduledService {
         document.setUserId("admin");
         document.setTitle(StringUtils.abbreviate(subject, 100));
         document.setDescription(StringUtils.abbreviate(mailContent.getMessage(), 4000));
+        document.setGPA("N/A");
+        document.setGRE("N/A");
+        document.setScore("N/A");
         document.setSubject(StringUtils.abbreviate(mailContent.getSubject(), 500));
         document.setFormat("EML");
         document.setSource("Inbox");
