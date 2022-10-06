@@ -77,6 +77,9 @@ public class TestDocumentResource extends BaseJerseyTest {
                         .param("rights", "Public Domain")
                         .param("tags", tag1Id)
                         .param("tags", tag2Id)
+                        .param("GPA", "4.0")
+                        .param("GRE", "700")
+                        .param("score", "1550")
                         .param("language", "eng")
                         .param("create_date", Long.toString(create1Date))), JsonObject.class);
         String document1Id = json.getString("id");
@@ -195,6 +198,7 @@ public class TestDocumentResource extends BaseJerseyTest {
         Assert.assertEquals(1, searchDocuments("software", document1Token));
         Assert.assertEquals(1, searchDocuments("greenland", document1Token));
         Assert.assertEquals(1, searchDocuments("public domain", document1Token));
+
         Assert.assertEquals(0, searchDocuments("by:document3", document1Token));
         Assert.assertEquals(2, searchDocuments("by:document1", document1Token));
         Assert.assertEquals(0, searchDocuments("by:nobody", document1Token));
@@ -247,6 +251,9 @@ public class TestDocumentResource extends BaseJerseyTest {
         Assert.assertEquals("Software", json.getString("type"));
         Assert.assertEquals("Greenland", json.getString("coverage"));
         Assert.assertEquals("Public Domain", json.getString("rights"));
+        Assert.assertEquals("4.0", json.getString("GPA"));
+        Assert.assertEquals("700", json.getString("GRE"));
+        Assert.assertEquals("1550", json.getString("score"));
         Assert.assertEquals("eng", json.getString("language"));
         Assert.assertEquals(create1Date, json.getJsonNumber("create_date").longValue());
         Assert.assertNotNull(json.get("update_date"));
