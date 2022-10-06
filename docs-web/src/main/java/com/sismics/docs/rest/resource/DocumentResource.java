@@ -379,9 +379,9 @@ public class DocumentResource extends BaseResource {
      * @apiSuccess {String} documents.file_id Main file ID
      * @apiSuccess {String} documents.title Title
      * @apiSuccess {String} documents.description Description
-     * @apiSuccess {String} GPA GPA
-     * @apiSuccess {String} GRE GRE
-     * @apiSuccess {String} score Score
+     * @apiSuccess {String} documents.GPA GPA
+     * @apiSuccess {String} documents.GRE GRE
+     * @apiSuccess {String} documents.score Score
      * @apiSuccess {Number} documents.create_date Create date (timestamp)
      * @apiSuccess {Number} documents.update_date Update date (timestamp)
      * @apiSuccess {String} documents.language Language
@@ -691,9 +691,9 @@ public class DocumentResource extends BaseResource {
      * @apiGroup Document
      * @apiParam {String} title Title
      * @apiParam {String} [description] Description
-     * @apiParam {String} [GPA] GPA
-     * @apiParam {String} [GRE] GRE
-     * @apiParam {String} [score] Score
+     * @apiParam {String} GPA GPA
+     * @apiParam {String} GRE GRE
+     * @apiParam {String} score Score
      * @apiParam {String} [subject] Subject
      * @apiParam {String} [identifier] Identifier
      * @apiParam {String} [publisher] Publisher

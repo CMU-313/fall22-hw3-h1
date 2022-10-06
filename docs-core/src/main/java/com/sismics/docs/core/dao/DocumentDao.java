@@ -33,15 +33,18 @@ public class DocumentDao {
         // Create the UUID
         document.setId(UUID.randomUUID().toString());
         document.setUpdateDate(new Date());
-        if (document.getGPA() == null) {
-            document.setGPA("0 - 1.99");
-        }
-        if (document.getGRE() == null) {
-            document.setGRE("N/A");
-        }
-        if (document.getScore() == null) {
-            document.setScore("N/A");
-        }
+        // if (document.getGPA() == null) {
+        //     document.setGPA("0 - 1.99");
+        // }
+        // if (document.getGRE() == null) {
+        //     document.setGRE("N/A");
+        // }
+        // if (document.getScore() == null) {
+        //     document.setScore("N/A");
+        // }
+        document.setGPA("0 - 1.99");
+        document.setGRE("N/A");
+        document.setScore("N/A");
 
         
         // Create the document
