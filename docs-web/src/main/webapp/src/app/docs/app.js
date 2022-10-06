@@ -420,7 +420,6 @@ angular.module('docs',
     })
     .state('statistics', {
       url: '/statistics',
-      abstract: true,
       views: {
         'page': {
           templateUrl: 'partial/docs/statistics.html',
