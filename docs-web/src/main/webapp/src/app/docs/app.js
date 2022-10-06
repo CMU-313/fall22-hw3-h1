@@ -527,6 +527,16 @@ angular.module('docs',
     $rootScope.appName = data.name;
   });
 
+  //GPAs
+  $rootScope.acceptedGPAs = [
+    { key: '0 - 1.99', label: '0 - 1.99' },
+    { key: '2.0 - 2.49', label: '2.0 - 2.49' },
+    { key: '2.50 - 2.99', label: '2.50 - 2.99' },
+    { key: '3.0 - 3.49', label: '3.0 - 3.49' },
+    { key: '3.5 - 3.99', label: '3.5 - 3.99' },
+    { key: '4.0 +', label: '4.0 +' }
+  ];
+
   // Languages
   $rootScope.acceptedLanguages = [
     { key: 'eng', label: 'English' },
