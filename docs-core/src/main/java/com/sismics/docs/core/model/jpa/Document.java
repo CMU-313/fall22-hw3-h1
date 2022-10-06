@@ -56,19 +56,19 @@ public class Document implements Loggable {
     /**
      * GPA.
      */
-    @Column(name = "DOC_GPA_C", nullable = false, length = 100)
+    @Column(name = "DOC_GPA_C", length = 100)
     private String GPA;
 
     /**
      * GRE.
      */
-    @Column(name = "DOC_GRE_C", nullable = false, length = 100)
+    @Column(name = "DOC_GRE_C", length = 100)
     private String GRE;
 
     /**
      * SCORE.
      */
-    @Column(name = "DOC_SCORE_C", nullable = false, length = 100)
+    @Column(name = "DOC_SCORE_C", length = 100)
     private String score;
 
     /**

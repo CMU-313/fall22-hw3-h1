@@ -34,7 +34,7 @@ public class DocumentDao {
         document.setId(UUID.randomUUID().toString());
         document.setUpdateDate(new Date());
         if (document.getGPA() == null) {
-            document.setGPA("N/A");
+            document.setGPA("0 - 1.99");
         }
         if (document.getGRE() == null) {
             document.setGRE("N/A");
@@ -121,8 +121,8 @@ public class DocumentDao {
         documentDto.setTitle((String) o[i++]);
         documentDto.setDescription((String) o[i++]);
         documentDto.setGPA((String) o[i++]);
-        documentDto.setGRE((String) o[i++]);
-        documentDto.setScore((String) o[i++]);
+        // documentDto.setGRE((String) o[i++]);
+        // documentDto.setScore((String) o[i++]);
         documentDto.setSubject((String) o[i++]);
         documentDto.setIdentifier((String) o[i++]);
         documentDto.setPublisher((String) o[i++]);

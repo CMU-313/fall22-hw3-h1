@@ -96,7 +96,7 @@ public class DocumentResource extends BaseResource {
      * @apiSuccess {String} description Description
      * @apiSuccess {String} GPA GPA
      * @apiSuccess {String} GRE GRE
-     * @apiSuccess {String} Score Score
+     * @apiSuccess {String} score Score
      * @apiSuccess {Number} create_date Create date (timestamp)
      * @apiSuccess {Number} update_date Update date (timestamp)
      * @apiSuccess {String} language Language
@@ -174,7 +174,7 @@ public class DocumentResource extends BaseResource {
                 .add("description", JsonUtil.nullable(documentDto.getDescription()))
                 .add("GPA", documentDto.getGPA())
                 .add("GRE", documentDto.getGRE())
-                .add("Score", documentDto.getScore())
+                .add("score", documentDto.getScore())
                 .add("create_date", documentDto.getCreateTimestamp())
                 .add("update_date", documentDto.getUpdateTimestamp())
                 .add("language", documentDto.getLanguage())
@@ -381,7 +381,7 @@ public class DocumentResource extends BaseResource {
      * @apiSuccess {String} documents.description Description
      * @apiSuccess {String} GPA GPA
      * @apiSuccess {String} GRE GRE
-     * @apiSuccess {String} Score Score
+     * @apiSuccess {String} score Score
      * @apiSuccess {Number} documents.create_date Create date (timestamp)
      * @apiSuccess {Number} documents.update_date Update date (timestamp)
      * @apiSuccess {String} documents.language Language
@@ -470,7 +470,7 @@ public class DocumentResource extends BaseResource {
                     .add("description", JsonUtil.nullable(documentDto.getDescription()))
                     .add("GPA", documentDto.getGPA())
                     .add("GRE", documentDto.getGRE())
-                    .add("Score", documentDto.getScore())
+                    .add("score", documentDto.getScore())
                     .add("create_date", documentDto.getCreateTimestamp())
                     .add("update_date", documentDto.getUpdateTimestamp())
                     .add("language", documentDto.getLanguage())
@@ -693,7 +693,7 @@ public class DocumentResource extends BaseResource {
      * @apiParam {String} [description] Description
      * @apiParam {String} [GPA] GPA
      * @apiParam {String} [GRE] GRE
-     * @apiParam {String} [Score] Score
+     * @apiParam {String} [score] Score
      * @apiParam {String} [subject] Subject
      * @apiParam {String} [identifier] Identifier
      * @apiParam {String} [publisher] Publisher
@@ -718,7 +718,7 @@ public class DocumentResource extends BaseResource {
      * @param description Description
      * @param GPA GPA
      * @param GRE GRE
-     * @param Score Score
+     * @param score Score
      * @param subject Subject
      * @param identifier Identifier
      * @param publisher Publisher
@@ -741,7 +741,7 @@ public class DocumentResource extends BaseResource {
             @FormParam("description") String description,
             @FormParam("GPA") String GPA,
             @FormParam("GRE") String GRE,
-            @FormParam("Score") String Score,
+            @FormParam("score") String score,
             @FormParam("subject") String subject,
             @FormParam("identifier") String identifier,
             @FormParam("publisher") String publisher,
@@ -784,7 +784,7 @@ public class DocumentResource extends BaseResource {
         document.setDescription(description);
         document.setGPA(GPA);
         document.setGRE(GRE);
-        document.setScore(Score);
+        document.setScore(score);
         document.setSubject(subject);
         document.setIdentifier(identifier);
         document.setPublisher(publisher);
@@ -838,7 +838,7 @@ public class DocumentResource extends BaseResource {
      * @apiParam {String} [description] Description
      * @apiParam {String} [GPA] GPA
      * @apiParam {String} [GRE] GRE
-     * @apiParam {String} [Score] Score
+     * @apiParam {String} [score] Score
      * @apiParam {String} [subject] Subject
      * @apiParam {String} [identifier] Identifier
      * @apiParam {String} [publisher] Publisher
@@ -872,7 +872,7 @@ public class DocumentResource extends BaseResource {
             @FormParam("description") String description,
             @FormParam("GPA") String GPA,
             @FormParam("GRE") String GRE,
-            @FormParam("Score") String Score,
+            @FormParam("score") String score,
             @FormParam("subject") String subject,
             @FormParam("identifier") String identifier,
             @FormParam("publisher") String publisher,
@@ -926,7 +926,7 @@ public class DocumentResource extends BaseResource {
         document.setDescription(description);
         document.setGPA(GPA);
         document.setGRE(GRE);
-        document.setScore(Score);
+        document.setScore(score);
         document.setSubject(subject);
         document.setIdentifier(identifier);
         document.setPublisher(publisher);
