@@ -537,6 +537,22 @@ angular.module('docs',
     { key: '4.0 +', label: '4.0 +' }
   ];
 
+  //GREs
+  $rootScope.acceptedGREs = [
+    { key: '260 - 280', label: '260 - 280' },
+    { key: '281 - 300', label: '281 - 300' },
+    { key: '301 - 320', label: '301 - 320' },
+    { key: '321 - 340', label: '321 - 340' },
+  ];
+
+  //GREs
+  $rootScope.acceptedGREs = [
+    { key: '260 - 280', label: '260 - 280' },
+    { key: '281 - 300', label: '281 - 300' },
+    { key: '301 - 320', label: '301 - 320' },
+    { key: '321 - 340', label: '321 - 340' },
+  ];
+
   // Languages
   $rootScope.acceptedLanguages = [
     { key: 'eng', label: 'English' },
