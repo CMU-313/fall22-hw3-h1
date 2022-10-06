@@ -616,6 +616,10 @@
       "description": "Documents can be organized in tags (which are like super-folders). Create them here."
     }
   },
+  "statistics": {
+    "title": "Aggregated Statistics",
+    "description": "To gain a better idea of the statistics, you can view the aggregated data numbers for all students below"
+  },
   "yes": "Yes",
   "no": "No",
   "ok": "OK",
