@@ -1,11 +1,11 @@
-<h1 class="page-header">{{ statistics.title }}&nbsp;</h1>
+<h1 class="page-header" >{{ 'statistics.title' | translate}}&nbsp;</h1>
 <label class="col-sm-2 control-label" for="inputDescription">{{ 'statistics.description' | translate }}</label>
-
 <ul class="list-unstyled">
-    <li ng-repeat="statistic in loadStatistics()">
-    <!-- <li ng-repeat="statistic in statistics"> -->
-        <span>{{statistic.gpa}}</span>
-        <span>{{statistic.gre}}</span>
-        <span>{{statistic.score}}</span>
+    <p>2   askldfjaklsjdfal;ksd</p>
+    <li ng-repeat="document in documents">
+        <span>1  askldfjaklsjdfal;ksd</span>
+        <span>{{document.gpa}}</span>
+        <span>{{document.gre}}</span>
+        <span>{{document.score}}</span>
     </li>
 </ul>
