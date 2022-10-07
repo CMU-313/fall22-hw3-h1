@@ -20,26 +20,20 @@ angular.module('docs').controller('Statistics', function($scope, Restangular) {
 
 
   // Retrieve statistics
-  $scope.stats = [
-    {gpa: 1, gre: 10, score: 100},
-    {gpa: 2, gre: 20, score: 200},
-    {gpa: 3, gre: 30, score: 300}
-  ];
+  $scope.stats = [];
   $scope.loadStatistics = function() {
-    Restangular.one('document/list')
+    Restangular.one('auditlog')
         .get()
-        .then(function (data) {
-          $scope.documents = data.documents;
-          $scope.totalDocuments = data.total;
-          // console.log("hi");
-          // console.log($scope.documents);
-          // $scope.documents.forEach((item, index) => {
-          //   $scope.statistics.push({gpa: item.GPA, gre: item.GRE, score: item.score});
-          // });
+        .then(function (audit_data) {
+          $scope.logs = audit_data.logs;
+          $scope.logs.forEach((log, index) => {
+            Restangular.one('document/' + log.target).get().then(function (doc_data) {
+              // console.log(doc_data);
+              $scope.stats.push({gpa: doc_data.GPA, gre: doc_data.GRE, score: doc_data.score});
+              console.log($scope.stats);
+            })
+          });
         });
-  
-    
-    
   };
   $scope.loadStatistics();
 
