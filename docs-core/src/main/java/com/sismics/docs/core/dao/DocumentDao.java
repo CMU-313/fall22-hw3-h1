@@ -34,13 +34,13 @@ public class DocumentDao {
         document.setId(UUID.randomUUID().toString());
         document.setUpdateDate(new Date());
         if (document.getGPA() == null) {
-            document.setGPA("N/A");
+            document.setGPA("0 - 1.99");
         }
         if (document.getGRE() == null) {
-            document.setGRE("N/A");
+            document.setGRE("260 - 280");
         }
         if (document.getScore() == null) {
-            document.setScore("N/A");
+            document.setScore("1");
         }
 
         

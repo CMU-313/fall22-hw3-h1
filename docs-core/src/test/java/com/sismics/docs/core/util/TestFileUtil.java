@@ -86,9 +86,9 @@ public class TestFileUtil {
             DocumentDto documentDto = new DocumentDto();
             documentDto.setTitle("My super document 1");
             documentDto.setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit.\r\n Duis id turpis iaculis, commodo est ac, efficitur quam.\t Nam accumsan magna in orci vulputate ultricies. Sed vulputate neque magna, at laoreet leo ultricies vel. Proin eu hendrerit felis. Quisque sit amet arcu efficitur, pulvinar orci sed, imperdiet elit. Nunc posuere ex sed fermentum congue. Aliquam ultrices convallis finibus. Praesent iaculis justo vitae dictum auctor. Praesent suscipit imperdiet erat ac maximus. Aenean pharetra quam sed fermentum commodo. Donec sagittis ipsum nibh, id congue dolor venenatis quis. In tincidunt nisl non ex sollicitudin, a imperdiet neque scelerisque. Nullam lacinia ac orci sed faucibus. Donec tincidunt venenatis justo, nec fermentum justo rutrum a.");
-            documentDto.setGPA("N/A");
-            documentDto.setGRE("N/A");
-            documentDto.setScore("N/A");
+            documentDto.setGPA("0 - 1.99");
+            documentDto.setGRE("260 -280");
+            documentDto.setScore("1");
             documentDto.setSubject("A set of random picture");
             documentDto.setIdentifier("ID-2016-08-00001");
             documentDto.setPublisher("My Publisher, Inc.");

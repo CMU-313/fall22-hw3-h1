@@ -417,6 +417,15 @@ angular.module('docs',
           controller: 'GroupProfile'
         }
       }
+    })
+    .state('statistics', {
+      url: '/statistics',
+      views: {
+        'page': {
+          templateUrl: 'partial/docs/statistics.html',
+          controller: 'Statistics'
+        }
+      }
     });
 
   // Configuring Restangular
@@ -517,6 +526,39 @@ angular.module('docs',
   Restangular.one('theme').get().then(function(data) {
     $rootScope.appName = data.name;
   });
+
+  //GPAs
+  $rootScope.acceptedGPAs = [
+    { key: '0 - 1.99', label: '0 - 1.99' },
+    { key: '2.0 - 2.49', label: '2.0 - 2.49' },
+    { key: '2.50 - 2.99', label: '2.50 - 2.99' },
+    { key: '3.0 - 3.49', label: '3.0 - 3.49' },
+    { key: '3.5 - 3.99', label: '3.5 - 3.99' },
+    { key: '4.0 +', label: '4.0 +' }
+  ];
+
+  //GREs
+  $rootScope.acceptedGREs = [
+    { key: '260 - 280', label: '260 - 280' },
+    { key: '281 - 300', label: '281 - 300' },
+    { key: '301 - 320', label: '301 - 320' },
+    { key: '321 - 340', label: '321 - 340' },
+  ];
+
+  //scores
+  $rootScope.acceptedScores = [
+    { key: '1', label: '1' },
+    { key: '2', label: '2' },
+    { key: '3', label: '3' },
+    { key: '4', label: '4' },
+    { key: '5', label: '5' },
+    { key: '6', label: '6' },
+    { key: '7', label: '7' },
+    { key: '8', label: '8' },
+    { key: '9', label: '9' },
+    { key: '10', label: '10' }
+  ];
+
 
   // Languages
   $rootScope.acceptedLanguages = [
