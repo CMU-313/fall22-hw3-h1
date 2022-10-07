@@ -37,4 +37,5 @@ angular.module('docs').controller('Statistics', function($scope, Restangular) {
   };
   $scope.loadStatistics();
 
+
 });
