@@ -1,10 +1,28 @@
-<h1 class="page-header col-xs-offset-1" >{{ 'statistics.title' | translate}}&nbsp;</h1>
-<label class="control-label col-xs-offset-1" for="inputDescription">{{ 'statistics.description' | translate }}</label>
-<ul class="list-unstyled col-xs-offset-1">
-    <p>2   askldfjaklsjdfal;ksd</p>
+
+<h1 class="page-header" >{{ 'statistics.title' | translate}}&nbsp;</h1>
+<h3 for="inputDescription">{{ 'statistics.description' | translate }}</h3>
+<ul class="list-unstyled">
+    <p><b>All Data</b></p>
     <li ng-repeat="document in stats">
-        <span>{{document.gpa}}</span>
-        <span>{{document.gre}}</span>
-        <span>{{document.score}}</span>
+        <div class="well well-3d">
+            <span>GPA: {{document.gpa}},&nbsp;</span>
+            <span>GRE: {{document.gre}},&nbsp;</span>
+            <span>Score: {{document.score}},&nbsp;</span>
+        </div>
     </li>
+    <br/>
+    <p><b>Totals</b></p>
+    <div class="well well-3d">
+        <li ng-repeat="gpa in GPAcount">
+            <span>GPA Range: {{gpa.key}},&nbsp;</span>
+            <span>Count: {{gpa.count}}</span>
+        </li>
+    </div>
+    <div class="well well-3d">
+        <li ng-repeat="gre in GREcount">
+            <span>GRE Range: {{gre.key}},&nbsp;</span>
+            <span>Count: {{gre.count}}</span>
+        </li>
+    </div>
+    
 </ul>
