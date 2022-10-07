@@ -36,6 +36,7 @@ angular.module('docs').controller('Statistics', function($scope, Restangular) {
   };
   $scope.loadStatistics();
 
+
   // aggregate statistics
   // $scope.GPAcount = { '0 - 1.99': 0,'2.0 - 2.49': 0,'2.50 - 2.99': 0,'3.0 - 3.49': 0,'3.5 - 3.99': 0,'4.0 +': 0 };
   $scope.GPAcount = [
